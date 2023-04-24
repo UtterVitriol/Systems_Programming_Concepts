@@ -9,7 +9,7 @@ checker12: solution.so
 checker12: checker12.c
 	$(CC) -o $@ -g -O1 -fno-omit-frame-pointer -fno-inline -Wall -Werror $^ -ldl
 
-solution.so: solution.S
+solution%.so: solution%.S
 	$(CC) -o $@ -fpic -shared $^
 
 .PHONY: clean

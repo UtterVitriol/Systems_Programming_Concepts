@@ -46,90 +46,91 @@ get_rip:
 
 .global dump_regs
 dump_regs:
+    # never finished this
     push rbp
     mov rbp, rsp
     sub rsp, 128
 
-    mov [rsp + 8], rax
-    mov [rsp + 16], rbx
-    mov [rsp + 24], rcx
-    mov [rsp + 32], rdx
-    mov [rsp + 40], rsi
-    mov [rsp + 48], rdi
-    mov [rsp + 56], rsp
-    mov [rsp + 64], rbp
-    mov [rsp + 72], r8
-    mov [rsp + 80], r9
-    mov [rsp + 88], r10
-    mov [rsp + 96], r11
-    mov [rsp + 104], r12
-    mov [rsp + 112], r13
-    mov [rsp + 120], r14
-    mov [rsp + 128], r15
+    mov [rsp], rax
+    mov [rsp + 8], rbx
+    mov [rsp + 16], rcx
+    mov [rsp + 24], rdx
+    mov [rsp + 32], rsi
+    mov [rsp + 40], rdi
+    mov [rsp + 48], rsp
+    mov [rsp + 50], rbp
+    mov [rsp + 64], r8
+    mov [rsp + 72], r9
+    mov [rsp + 80], r10
+    mov [rsp + 88], r11
+    mov [rsp + 96], r12
+    mov [rsp + 104], r13
+    mov [rsp + 112], r14
+    mov [rsp + 120], r15
 
     mov rdi, .RAX[rip]
     mov rsi, [rsp]      #, rax
     call printf
 
-    mov rdi, .RBX[rip]
-    mov rsi, [rsp + 8]  #, rbx
-    call printf
+    # mov rdi, .RBX[rip]
+    # mov rsi, [rsp + 8]  #, rbx
+    # call printf
 
-    mov rdi, .RCX[rip]
-    mov rsi, [rsp + 16] #, rcx
-    call printf
+    # mov rdi, .RCX[rip]
+    # mov rsi, [rsp + 16] #, rcx
+    # call printf
 
-    mov rdi, .RDX[rip]
-    mov rsi, [rsp + 24] #, rdx
-    call printf
+    # mov rdi, .RDX[rip]
+    # mov rsi, [rsp + 24] #, rdx
+    # call printf
 
-    mov rdi, .RSI[rip]
-    mov rsi, [rsp + 32] #, rsi
-    call printf
+    # mov rdi, .RSI[rip]
+    # mov rsi, [rsp + 32] #, rsi
+    # call printf
 
-    mov rdi, .RDI[rip]
-    mov rsi, [rsp + 40] #, rdi
-    call printf
+    # mov rdi, .RDI[rip]
+    # mov rsi, [rsp + 40] #, rdi
+    # call printf
 
-    mov rdi, .RSP[rip]
-    mov rsi, [rsp + 48] #, rsp
-    call printf
+    # mov rdi, .RSP[rip]
+    # mov rsi, [rsp + 48] #, rsp
+    # call printf
 
-    mov rdi, .RBP[rip]
-    mov rsi, [rsp + 56] #, rbp
-    call printf
+    # mov rdi, .RBP[rip]
+    # mov rsi, [rsp + 56] #, rbp
+    # call printf
 
-    mov rdi, .R8[rip]
-    mov rsi, [rsp + 64] #, r8
-    call printf
+    # mov rdi, .R8[rip]
+    # mov rsi, [rsp + 64] #, r8
+    # call printf
 
-    mov rdi, .R9[rip]
-    mov rsi, [rsp + 72] #, r9
-    call printf
+    # mov rdi, .R9[rip]
+    # mov rsi, [rsp + 72] #, r9
+    # call printf
 
-    mov rdi, .R10[rip]
-    mov rsi, [rsp + 80] #, r10
-    call printf
+    # mov rdi, .R10[rip]
+    # mov rsi, [rsp + 80] #, r10
+    # call printf
 
-    mov rdi, .R11[rip]
-    mov rsi, [rsp + 88] #, r11
-    call printf
+    # mov rdi, .R11[rip]
+    # mov rsi, [rsp + 88] #, r11
+    # call printf
 
-    mov rdi, .R12[rip]
-    mov rsi, [rsp + 96] #, r12
-    call printf
+    # mov rdi, .R12[rip]
+    # mov rsi, [rsp + 96] #, r12
+    # call printf
 
-    mov rdi, .R13[rip]
-    mov rsi, [rsp + 104]#, r13
-    call printf
+    # mov rdi, .R13[rip]
+    # mov rsi, [rsp + 104]#, r13
+    # call printf
 
-    mov rdi, .R14[rip]
-    mov rsi, [rsp + 112]#, r14
-    call printf
+    # mov rdi, .R14[rip]
+    # mov rsi, [rsp + 112]#, r14
+    # call printf
 
-    mov rdi, .R15[rip]
-    mov rsi, [rsp + 120]#, r15
-    call printf
+    # mov rdi, .R15[rip]
+    # mov rsi, [rsp + 120]#, r15
+    # call printf
     
 
     leave
