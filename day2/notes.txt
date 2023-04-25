@@ -1,0 +1,26 @@
+vaddr -> 
+
+break into parts
+
+struct{
+	pml4
+	pdpt
+	pdt
+	pt
+	offset
+}
+
+cr3 format
+
+
+#include <x86intrin.h>
+
+static uint64_t
+cycle_count()
+{
+	_mm_mfence();
+	_mm_lfence();
+	uint64_t tsc = __rdtsc();
+	_mm_lfence();
+	return tsc;
+}
